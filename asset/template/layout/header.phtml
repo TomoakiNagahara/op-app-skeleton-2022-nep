@@ -18,5 +18,5 @@ namespace OP;
 /* @var $app UNIT\App */
 ?>
 <header>
-	<a href="<?= $app->URL('app:/') ?>"><?= Env::Get('app')['title'] ?? 'TOP' ?></a>
+	<a href="<?= ConvertURL('app:/') ?>"><?= Env::Get('app')['title'] ?? 'TOP' ?></a>
 </header>

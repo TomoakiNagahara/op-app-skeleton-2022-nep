@@ -54,7 +54,7 @@ $hash_css = Unit('WebPack')->FileContentHash('css');
 
 	<!-- JavaScript -->
 	<script type="text/javascript" src="<?= "{$app_root}webpack/js/?layout={$layout}&hash={$hash_js}" ?>" defer></script>
-	<?php App::Template('i18n_load_script.phtml'); ?>
+	<?php Template('i18n_load_script.phtml'); ?>
 
 	<!-- title -->
 	<title><?= App::Title() ?></title>
