@@ -18,7 +18,13 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+   #runs-on: ubuntu-latest
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ ubuntu-latest, windows-latest ]
+        php: [ '5.4', '5.5', '5.6', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1' ]
+    name: PHP ${{ matrix.php }} sample
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -34,3 +40,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Setup PHP
+        uses: nanasess/setup-php@v3
+        with:
+          php-version: ${{ matrix.php }}
+      - run: php app.php
