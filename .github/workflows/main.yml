@@ -22,8 +22,8 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ ubuntu-latest, windows-latest ]
-        php: [ '5.4', '5.5', '5.6', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1' ]
+        operating-system: [ ubuntu-latest ]
+        php: [ '7.4', '8.1' ]
     name: PHP ${{ matrix.php }} sample
 
     # Steps represent a sequence of tasks that will be executed as part of the job
