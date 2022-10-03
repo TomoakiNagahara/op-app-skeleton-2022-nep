@@ -7,6 +7,11 @@ The onepiece-framework 2020 - New Enforce Power
  Welcome to "onepiece-framework" app "skeleton" 2020 on New Enforce Power.
  The "onepiece-framework" is insanely great!!
 
+# Goals for 2022
+
+ 1. CI/CD All modules and units. GitHub Action and Webhooks.
+ 1. Separated Unit, Module, Layout and JS/CSS directories.
+
 # Indexes
 
  * <a href="#overview">Overview</a>
