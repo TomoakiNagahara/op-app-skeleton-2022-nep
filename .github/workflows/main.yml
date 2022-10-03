@@ -24,7 +24,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ ubuntu-latest ]
-        php: [ '7.4', '8.1' ]
+        php: [ '7.4' ] # [ '5.4', '5.5', '5.6', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1' ]
     name: PHP ${{ matrix.php }} sample
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -42,8 +42,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      # https://github.com/marketplace/actions/setup-php-environment
       - name: Setup PHP
         uses: nanasess/setup-php@v3
         with:
           php-version: ${{ matrix.php }}
       - run: php app.php
+      - run: sh ./asset/git/submodule/init.sh
