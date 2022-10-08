@@ -24,32 +24,12 @@ call_user_func(function(){
 		}
 		require($path);
 
-		/** Real path.
-		 *
-		 */
-		RootPath('real', realpath(dirname($_SERVER['SCRIPT_FILENAME'])));
-
-		/** The document root is directly under the FQDN.
-		 *
-		 */
-		RootPath('doc'  , $_SERVER['DOCUMENT_ROOT']);
-
-		/** About the app directory.
-		 *
-		 * Care should be taken if the directory is a link.
-		 * A link is called an alias on Mac and a shortcut on Windows.
-		 * "SCRIPT_FILENAME" is path of URL.
-		 * Web Application needs a link path.
-		 * Don't be generate real path.
-		 */
-		$app_root = dirname($_SERVER['SCRIPT_FILENAME']);
-		RootPath('app'  , $app_root);
-
 		/** Asset root would including application asset.
 		 *  core, unit, template, layout, config
 		 *
 		 * @updated   2019-12-16   Correspond link.
 		 */
+		/*
 		//	Check if the asset directory is under the app root.
 		if( strpos(__DIR__, realpath($app_root)) === 0 ){
 			//	The asset directory is under the app root.
@@ -59,12 +39,8 @@ call_user_func(function(){
 			$asset_root = __DIR__;
 		}
 		RootPath('asset', $asset_root);
-
-		/** The onepiece-framework's core is under the asset root.
-		 *
-		 * @updated   2019-12-16
-		 */
-		RootPath('op'   , $asset_root . '/core');
+		*/
+		RootPath('asset', __DIR__);
 
 		//	Check if symbolic link.
 		if( is_link(rtrim(ConvertPath('app:/'),'/')) ){
