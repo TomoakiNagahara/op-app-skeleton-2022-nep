@@ -18,6 +18,9 @@ namespace OP;
 /* @var $app \OP\UNIT\App */
 OP::Layout(false);
 
+//	Disabled i18n.
+Config::Set('i18n', ['url' => null]);
+
 //	...
 $href = $_SERVER['HTTP_REFERER'] ?? OP::ConvertURL('app:/');
 
