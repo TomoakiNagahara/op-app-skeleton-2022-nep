@@ -10,11 +10,16 @@
  * @copyright Tomoaki Nagahara All right reserved.
  */
 
+/** namespace
+ *
+ */
+namespace OP;
+
 /* @var $app \OP\UNIT\App */
-$app->Layout(false);
+OP::Layout(false);
 
 //	...
-$href = $_SERVER['HTTP_REFERER'] ?? $app->URL('app:/');
+$href = $_SERVER['HTTP_REFERER'] ?? OP::ConvertURL('app:/');
 
 ?>
 <div class="main-wrapper">
