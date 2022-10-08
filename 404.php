@@ -29,7 +29,7 @@ if( date('m', Env::Time()) == '10' ){
 }
 
 //	Display 404 page.
-$app->Template($path);
+OP::Template($path);
 
 //	404 Error notice.
 if( Config::Get('notfound')['execute'] ?? null ){
