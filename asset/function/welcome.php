@@ -22,6 +22,7 @@ use function OP\CompressPath;
 
 /** Get link list.
  *
+ * @deprecated 2022-10-08 develop only
  * @return    array
  */
 function GetLinkList(){

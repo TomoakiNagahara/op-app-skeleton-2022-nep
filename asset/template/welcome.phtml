@@ -15,12 +15,6 @@
  */
 namespace OP;
 
-/** use
- *
- * @created   2019-12-09
- */
-use function OP\APP\FUNC\GetLinkList;
-
 /* @var $app UNIT\App */
 $app = Unit('App');
 $app->Title('Welcome');
@@ -36,10 +30,6 @@ if( strpos($asset_root, $app_root) === 0 ){
 }else{
 	$asset_path = $asset_root;
 }
-
-//	...
-require_once( ConvertPath('asset:/function/welcome.php') );
-$list = GetLinkList();
 
 ?>
 <style>
@@ -84,6 +74,48 @@ $list = GetLinkList();
 
 <!-- Separator -->
 <hr class="float clear both"/>
+
+<!-- Developer -->
+<section>
+	<h2>Built-in Service</h2>
+<?php if( file_exists( OP::ConvertPath('app:/_develop/', false) ) ): ?>
+	<!-- Link is exists -->
+	<section>
+		<ul>
+			<li><a href="./_develop/">develop</a></li>
+		</ul>
+	</section>
+<?php else: ?>
+	<!-- Link is not exists -->
+	<section>
+		<p>Please enter the next command.</p>
+		<div class="code padding top left right bottom half">
+			<div class="padding left half">
+			<code>cd <?= $app_root ?></code><br/>
+			<code>ln -s <?= $asset_path ?>develop _develop</code>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>
+</section>
+
+<?php
+/**
+ * @deprecated 2022-10-08
+ */
+return;
+
+/** use
+ *
+ * @created   2019-12-09
+ */
+use function OP\APP\FUNC\GetLinkList;
+
+//	...
+require_once( ConvertPath('asset:/function/welcome.php') );
+$list = GetLinkList();
+
+?>
 
 <!-- Already linked -->
 <section>
