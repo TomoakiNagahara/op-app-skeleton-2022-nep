@@ -16,8 +16,7 @@ namespace OP;
 
  /************************************************/
 //	.htaccess file has not been initialized.	//
-/* @var $app UNIT\App */
-if( empty($app) ){
+if( defined('_OP_NAME_SPACE_') === false ){
 	include('app.php');
 	exit(__FILE__.' #'.__LINE__);
 }
