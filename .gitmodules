@@ -50,3 +50,9 @@
 	path = asset/develop
 	url = https://github.com/onepiece-framework/module-develop.git
 	branch = 2020
+[submodule "asset/webpack/css"]
+	path = asset/webpack/css
+	url = https://github.com/onepiece-framework/op-webpack-css.git
+[submodule "asset/webpack/js"]
+	path = asset/webpack/js
+	url = https://github.com/onepiece-framework/op-webpack-js
