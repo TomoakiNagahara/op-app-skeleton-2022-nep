@@ -8,10 +8,11 @@
  * @copyright Tomoaki Nagahara All right reserved.
  */
 
-//	Remove URL Query.
+//	Remove URL Query. /file/path/?foo=bar --> /file/path/
 $rewrite_base = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 //	Search app.php.
+/* Why do need this code?
 do{
 	//	Check if document root.
 	if( $rewrite_base === '/' ){
@@ -27,8 +28,9 @@ do{
 	}
 
 }while( $rewrite_base = dirname($rewrite_base) );
+*/
 
-//	Calc app root.
+//	Calc app root. /www/htdocs/ --> /www/htdocs + /file/path/ <-- /file/path
 $app_root = rtrim($_SERVER['DOCUMENT_ROOT'],'/') . rtrim($rewrite_base,'/').'/';
 
 //	Search .htaccess.
