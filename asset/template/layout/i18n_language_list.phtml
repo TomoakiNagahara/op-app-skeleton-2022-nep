@@ -15,6 +15,11 @@
  */
 namespace OP;
 
+//	Load i18n URL
+if(!Config::Get('i18n')['url'] ?? null ){
+	return;
+}
+
 ?>
 <section>
 	<nav>
