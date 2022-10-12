@@ -23,4 +23,5 @@ namespace OP;
 return [
 	'execute'   =>  true,
 	'name'      => 'white',
+	'darkmode'  =>  true,
 ];
