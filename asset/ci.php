@@ -24,8 +24,15 @@ try {
 	//	...
 	chdir(OP::MetaRoot('op'));
 
-	//	...
-	foreach( glob('*.class.php') as $file ){
+	//	Target can be specified.
+	if( $target = OP()->Request('target') ){
+		$list = [$target];
+	}else{
+		$list = glob('*.class.php');
+	}
+
+	//	Do each target file.
+	foreach( $list as $file ){
 		//	...
 		if( $file[0] === '_' ){
 			continue;
