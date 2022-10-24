@@ -17,6 +17,7 @@
  */
 namespace OP;
 
+/*
 //	Seed
 $seed = __FILE__;
 
@@ -25,6 +26,7 @@ $app_id = substr(md5($seed), 0, 8);
 
 //	Set App ID.
 Env::AppID($app_id);
+*/
 
 //	Get admin config.
 $config = Config::Get('admin');
