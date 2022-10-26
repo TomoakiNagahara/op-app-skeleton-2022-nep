@@ -34,11 +34,8 @@ $config = Config::Get('admin');
 //	Set Admin IP-Address and Admin E-Mail Address.
 foreach( [Env::_ADMIN_IP_, Env::_ADMIN_MAIL_] as $key ){
 	//	...
-	if(!$val = $config[$key] ?? null ){
+	if(!$config[$key] ?? null ){
 		include(__DIR__.'/bootstrap/app/config-admin.phtml');
 		exit;
 	}
-
-	//	...
-	Env::Set($key, $val);
 }
