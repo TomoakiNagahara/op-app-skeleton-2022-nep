@@ -23,9 +23,11 @@ $app_id = substr(md5($seed), 0, 8);
  *
  * @return    array        $config
  */
+/*
 $config = [
 	'app_id' => $app_id
 ];
+*/
 
 //	...
-return $config;
+return $app_id;
