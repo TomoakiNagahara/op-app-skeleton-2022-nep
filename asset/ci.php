@@ -23,6 +23,9 @@ try {
 	//	...
 	include_once(__DIR__.'/app.php');
 
+	//	Set AppID
+	Env::AppID('self-check');
+
 	//	Set asset root.
 	OP::MetaRoot('asset', __DIR__);
 
