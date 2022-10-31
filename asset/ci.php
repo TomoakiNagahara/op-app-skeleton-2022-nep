@@ -21,7 +21,7 @@ namespace OP;
 //	...
 try {
 	//	...
-	include_once(__DIR__.'/core/Bootstrap.php');
+	include_once(__DIR__.'/app.php');
 
 	//	Set asset root.
 	OP::MetaRoot('asset', __DIR__);
