@@ -27,10 +27,10 @@ try {
 	Env::AppID('self-check');
 
 	//	Set asset root.
-	OP::MetaRoot('asset', __DIR__);
+	RootPath('asset', __DIR__);
 
 	//	...
-	chdir(OP::MetaRoot('op'));
+	chdir( RootPath('op') );
 
 	//	Target can be specified.
 	if( $target = OP()->Request('target') ){
