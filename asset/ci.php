@@ -55,11 +55,15 @@ try {
 	}
 
 } catch ( \Throwable $e ){
+	//	...
 	$file    = $e->getFile();
-	$line    = $e->getLine();
 	$message = $e->getMessage();
-	$file    = OP::MetaFromPath($file);
-	D("{$file} #{$line} : {$message}");
+	$file    = OP()->MetaPath()->Encode($file);
+
+	//	...
+	echo "\n\n";
+	echo $message."\n\n";
+	echo $e->getTraceAsString()."\n\n";
 	return false;
 }
 
