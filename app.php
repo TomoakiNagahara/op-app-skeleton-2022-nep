@@ -10,6 +10,12 @@
  * @copyright Tomoaki Nagahara All right reserved.
  */
 
+ /** Declare strict
+ *
+ * @created   2022-11-01
+ */
+declare(strict_types=1);
+
  /** namespace
  *
  * @created   2019-12-12
