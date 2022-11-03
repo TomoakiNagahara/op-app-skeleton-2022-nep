@@ -17,4 +17,5 @@
 return [
 	'title'     => 'onepiece-framework app skeleton 2020',
 	'copyright' => 'Copyright 2009 All right reserved.',
+	'app.phtml' =>  OP\Env::isAdmin() ? true: false,
 ];
