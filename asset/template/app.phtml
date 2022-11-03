@@ -20,8 +20,18 @@ $time = (microtime ( true ) - _OP_APP_START_);
 $used = memory_get_usage () / 1000;
 $peak = memory_get_peak_usage () / 1000;
 
-?>
-<script>
-console.log('execute time: <?= $time ?>');
-console.log('momory usage: <?= $used ?>KB (max: <?= $peak ?>KB)');
-</script>
+//	...
+$execute_time = "execute time: {$time}";
+$memory_usage = "memory usage: {$used}KB (max: {$peak}KB)";
+
+//	...
+$mime = Env::Mime();
+
+//	...
+if( $mime === 'text/html' ){
+	echo "<script> console.log('{$execute_time}".'\n'."{$memory_usage}'); </script>";
+}else if( $mime === 'text/css' or $mime === 'text/javascript' ){
+	echo PHP_EOL.'/*'.PHP_EOL.$execute_time.PHP_EOL.$memory_usage.PHP_EOL.'*/'.PHP_EOL;
+}else if( $mime === 'text/plain' ){
+	echo $execute_time.PHP_EOL.$memory_usage.PHP_EOL;
+}
