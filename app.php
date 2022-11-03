@@ -56,8 +56,8 @@ try {
 	$app->Auto();
 
 	//	Output memory usage.
-	if( Env::isAdmin() and (Env::Mime() === 'text/html') ){
-		$app->Template('app.phtml');
+	if( OP::Config('app')['app.phtml'] ?? null ){
+		OP::Template('app.phtml');
 	};
 
 } catch ( \Throwable $e ){
