@@ -7,14 +7,31 @@
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
+//	..
+$m1 = 'Not initializing git submodule';
+$m2 = 'Execute the following command.';
+$c1 = 'cd '.dirname($_SERVER['SCRIPT_FILENAME']);
+$c2 = 'sh ./asset/git/submodule/init.sh';
 ?>
+<?php if( $_SERVER['SHELL'] ?? null ): ?>
+	<?php
+	echo PHP_EOL;
+	echo $m1 . PHP_EOL;
+	echo $m2 . PHP_EOL;
+	echo PHP_EOL;
+	echo '1: ' . $c1 . PHP_EOL;
+	echo '2: ' . $c2 . PHP_EOL;
+	exit(1);
+	?>
+<?php else: ?>
 <?php include(__DIR__.'/../html_head.phtml') ?>
 		<section>
-			<h1>Not initializing git submodule</h1>
-			<p>Execute the following command.</p>
+			<h1><?= $m1 ?></h1>
+			<p> <?= $m2 ?></p>
 			<ol>
-				<li><code class="code">cd <?php echo dirname($_SERVER['SCRIPT_FILENAME']) ?></code></li>
-				<li><code class="code">sh ./asset/git/submodule/init.sh</code></li>
+				<li><code class="code"><?= $c1 ?></code></li>
+				<li><code class="code"><?= $c2 ?></code></li>
 			</ol>
 		</section>
 <?php include(__DIR__.'/../html_foot.phtml') ?>
+<?php endif; ?>
