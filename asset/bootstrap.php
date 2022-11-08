@@ -60,6 +60,11 @@ namespace OP;
 			require(__DIR__.'/bootstrap/php/module.phtml');
 		};
 
+		//	Checking CI
+		if( 'ci.php' === $_SERVER['SCRIPT_FILENAME'] ){
+			return;
+		}
+
 		//	Checking rewrite setting.
 		if( 'app.php' !== basename($_SERVER['SCRIPT_FILENAME']) ){
 			//	Has not been setting rewrite.
