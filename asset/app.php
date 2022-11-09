@@ -32,7 +32,11 @@ try {
 	 * @moved     2022-10-30   bootstrap.php - Initialize onepiece-framework application.
 	 * @added     2022-10-30   rootpath.php
 	 */
-	foreach(['bootstrap','config','_config'] as $file){
+	foreach([
+		'bootstrap',
+		'config',
+		'_config',
+	] as $file){
 		//	Build full path.
 		$file = __DIR__.'/'.$file.'.php';
 
