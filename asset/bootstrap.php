@@ -40,13 +40,17 @@ namespace OP;
 		}
 		RootPath('asset', $asset_root);
 		*/
+		/*
 		RootPath('asset', __DIR__);
+		*/
 
+		/*
 		//	Check if symbolic link.
 		if( is_link(rtrim(ConvertPath('app:/'),'/')) ){
 			// Register real path.
 			RootPath('link' , dirname(__DIR__));
 		}
+		*/
 
 		//	Check mbstring installed.
 		if(!function_exists('mb_language') ){
