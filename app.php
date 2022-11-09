@@ -30,13 +30,6 @@ namespace OP;
  */
 define('_OP_APP_START_', microtime(true));
 
-/** PHP Setting
- *
- */
-ini_set('short_open_tag','On' );
-ini_set('display_errors','On' );
-ini_set('log_errors'    ,'Off');
-
 /** Launch onepiece-framework core.
  *
  * @created  2019-11-18
