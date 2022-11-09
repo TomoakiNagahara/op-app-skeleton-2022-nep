@@ -34,6 +34,7 @@ try {
 	 */
 	foreach([
 		'bootstrap',
+		'rootpath',
 		'config',
 		'_config',
 	] as $file){
