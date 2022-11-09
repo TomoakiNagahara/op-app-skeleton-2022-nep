@@ -14,13 +14,6 @@
  */
 namespace OP;
 
-/** PHP Setting
- *
- */
-ini_set('short_open_tag','On' );
-ini_set('display_errors','On' );
-ini_set('log_errors'    ,'Off');
-
 //	...
 try {
 	/** Include Application environment config.
