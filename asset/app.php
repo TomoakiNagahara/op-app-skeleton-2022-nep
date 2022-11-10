@@ -26,6 +26,7 @@ try {
 	 * @added     2022-10-30   rootpath.php
 	 */
 	foreach([
+		'config/php',
 		'bootstrap',
 		'rootpath',
 		'config',
