@@ -7,23 +7,31 @@
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
-//	..
+//	...
 $m1 = 'Not initializing git submodule';
 $m2 = 'Execute the following command.';
 $c1 = 'cd '.dirname($_SERVER['SCRIPT_FILENAME']);
 $c2 = 'sh ./asset/git/submodule/init.sh';
-?>
-<?php if( $_SERVER['SHELL'] ?? null ): ?>
-	<?php
+
+//	...
+if( basename($_SERVER['SCRIPT_FILENAME']) === 'ci.php' ){
+	echo '0' . PHP_EOL;
+	echo $c1 . PHP_EOL;
+	echo $c2 . PHP_EOL;
+	exit(__LINE__);
+}
+
+//	...
+if( isset($_SERVER['SHELL']) ){
 	echo PHP_EOL;
 	echo $m1 . PHP_EOL;
 	echo $m2 . PHP_EOL;
 	echo PHP_EOL;
 	echo '1: ' . $c1 . PHP_EOL;
 	echo '2: ' . $c2 . PHP_EOL;
-	exit(1);
-	?>
-<?php else: ?>
+	exit(__LINE__);
+}
+?>
 <?php include(__DIR__.'/../html_head.phtml') ?>
 		<section>
 			<h1><?= $m1 ?></h1>
@@ -34,4 +42,5 @@ $c2 = 'sh ./asset/git/submodule/init.sh';
 			</ol>
 		</section>
 <?php include(__DIR__.'/../html_foot.phtml') ?>
-<?php endif; ?>
+<?php
+exit(__LINE__);
