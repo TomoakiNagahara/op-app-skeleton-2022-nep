@@ -29,6 +29,9 @@ namespace OP;
 define('_OP_APP_START_', microtime(true));
 
 //	...
+`git stash save`;
+
+//	...
 try {
 	//	...
 	include('asset/app.php');
@@ -74,9 +77,11 @@ try {
 	echo "\n\n";
 	echo $message."\n\n";
 	echo $e->getTraceAsString()."\n\n";
-	exit(1);
-	return false;
+	$exit = __LINE__;
 }
 
 //	...
-return true;
+`git stash pop`;
+
+//	...
+exit($exit ?? 0);
