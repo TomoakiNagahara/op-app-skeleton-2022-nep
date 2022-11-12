@@ -24,7 +24,7 @@ if( basename($_SERVER['SCRIPT_FILENAME']) === 'ci.php' ){
 	echo '0' . PHP_EOL;
 	echo $c1 . PHP_EOL;
 	echo $c2 . PHP_EOL;
-	exit(__LINE__);
+	return;
 }
 
 //	...
@@ -35,7 +35,7 @@ if( isset($_SERVER['SHELL']) ){
 	echo PHP_EOL;
 	echo '1: ' . $c1 . PHP_EOL;
 	echo '2: ' . $c2 . PHP_EOL;
-	exit(__LINE__);
+	return;
 }
 ?>
 <?php include(__DIR__.'/../html_head.phtml') ?>
@@ -48,5 +48,3 @@ if( isset($_SERVER['SHELL']) ){
 			</ol>
 		</section>
 <?php include(__DIR__.'/../html_foot.phtml') ?>
-<?php
-exit(__LINE__);
