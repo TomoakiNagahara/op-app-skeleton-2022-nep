@@ -64,8 +64,8 @@ namespace OP;
 			require(__DIR__.'/bootstrap/php/module.phtml');
 		};
 
-		//	Checking CI
-		if( 'ci.php' === $_SERVER['SCRIPT_FILENAME'] ){
+		//	Checking Shell.
+		if( Env::isShell() ){
 			return;
 		}
 
