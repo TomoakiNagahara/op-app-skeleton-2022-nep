@@ -11,18 +11,26 @@
 //	...
 namespace OP;
 
+//	...
+$path = OP::MetaPath('asset:/config/admin.php');
+
+//	...
+$file = file_get_contents($path);
+$file = Encode($file);
+$file = preg_replace(['|\/\*\* .+|','| \*.+|','| \*|','|\n/\*|','|\n\*/|'], '', $file);
+$file = preg_replace(['|//\t|','|\t|','|\n+|','|,\n|','|,\n\n\]|'], ['//  ','    ',"\n",",\n\n",",\n]"], $file);
+
+//	...
+if( Env::isCI() ){
+	//	...
+	if(!file_put_contents(OP::MetaPath('asset:/config/').'_admin.php',  OP::Decode($file)) ){
+		exit(__LINE__);
+	}
+	//	
+	return;
+}
 ?>
 <?php include(__DIR__.'/../html_head.phtml') ?>
-		<?php
-		//	...
-		$path = ConvertPath('asset:/config/admin.php');
-
-		//	...
-		$file = file_get_contents($path);
-		$file = Encode($file);
-		$file = preg_replace(['|\/\*\* .+|','| \*.+|','| \*|','|\n/\*|','|\n\*/|'], '', $file);
-		$file = preg_replace(['|//\t|','|\t|','|\n+|','|,\n|','|,\n\n\]|'], ['//  ','    ',"\n",",\n\n",",\n]"], $file);
-		?>
 		<section>
 			<h1>The admin config file has not been set.</h1>
 
