@@ -31,8 +31,8 @@ define('_OP_APP_START_', microtime(true));
 //	init
 $fail = false;
 
-//	...
-`git stash save`;
+//	Stash uncommitted code.
+$stash_save = `git stash save`;
 
 //	...
 try {
@@ -83,8 +83,11 @@ try {
 	$fail = true;
 }
 
-//	...
-`git stash pop`;
+//	Undo stashed code.
+$stash_pop = `git stash pop`;
 
 //	...
 exit($fail ? 1: 0);
+
+//	Eclipse never use notice.
+var_dump($stash_save, $stash_pop);
