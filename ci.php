@@ -32,7 +32,7 @@ define('_OP_APP_START_', microtime(true));
 $fail = false;
 
 //	Stash uncommitted code.
-//`git stash save`;
+$stash_save = `git stash save`;
 
 //	...
 try {
@@ -84,7 +84,7 @@ try {
 }
 
 //	Undo stashed code.
-`git stash pop`;
+$return = exec('git stash pop', $output, $code);
 
 //	...
 exit($fail ? 1: 0);
