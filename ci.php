@@ -28,6 +28,9 @@ namespace OP;
  */
 define('_OP_APP_START_', microtime(true));
 
+//	init
+$fail = false;
+
 //	...
 `git stash save`;
 
@@ -77,11 +80,11 @@ try {
 	echo "\n\n";
 	echo $message."\n\n";
 	echo $e->getTraceAsString()."\n\n";
-	$exit = __LINE__;
+	$fail = true;
 }
 
 //	...
 `git stash pop`;
 
 //	...
-exit($exit ?? 0);
+exit($fail ? 1: 0);
