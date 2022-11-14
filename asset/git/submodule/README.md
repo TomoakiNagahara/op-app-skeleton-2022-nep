@@ -35,3 +35,11 @@ sh update.sh origin branch_name
 ```sh
 sh github.sh my_github_user_name
 ```
+
+# local.sh
+
+ Change to local repository from git.
+
+```sh
+sh github.sh my_github_user_name
+```
