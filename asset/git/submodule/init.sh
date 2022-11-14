@@ -1,6 +1,12 @@
 
 # branch name
-BRANCH=${1:-2022}
+BRANCH=${1}
+
+# Check branch name.
+if [ -z "$BRANCH" ]; then
+  echo 'Empty branch name. --> sh asset/git/submodule/init.sh 2022'
+  exit 1
+fi
 
 # Init git submodule
 # git submodule init
