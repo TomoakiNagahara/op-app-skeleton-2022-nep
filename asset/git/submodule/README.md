@@ -23,7 +23,8 @@ sh rename.sh origin upstream
 sh update.sh origin branch_name
 ```
 
-# z.sh
+# origin.sh
 
  Add new origin that private.
+ This script is deprecated.
 
