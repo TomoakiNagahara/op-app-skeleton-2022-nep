@@ -28,3 +28,10 @@ sh update.sh origin branch_name
  Add new origin that private.
  This script is deprecated.
 
+# github.sh
+
+ Change github user name.
+
+```sh
+sh github.sh my_github_user_name
+```
