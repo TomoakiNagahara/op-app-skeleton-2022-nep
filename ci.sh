@@ -7,10 +7,11 @@
  # @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  # @copyright Tomoaki Nagahara All right reserved.
 
-git stash save
-git submodule foreach git stash save
+# git stash save
+# git submodule foreach git stash save
 
 php ci.php display=0
 
-git stash pop
-git submodule foreach git stash pop
+# git stash pop
+# git submodule foreach git stash pop
+
