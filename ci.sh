@@ -7,4 +7,8 @@
  # @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  # @copyright Tomoaki Nagahara All right reserved.
 
+git stash save
+
 php ci.php display=0
+
+git stash pop
