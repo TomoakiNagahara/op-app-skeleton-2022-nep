@@ -84,7 +84,9 @@ try {
 }
 
 //	Undo stashed code.
-$return = exec('git stash pop', $output, $code);
+if( $stash_save !== "No local changes to save\n" ){
+	`git stash pop`;
+}
 
 //	...
 exit($fail ? 1: 0);
