@@ -10,8 +10,11 @@
 # git stash save
 # git submodule foreach git stash save
 
+# CI
 php ci.php display=0
+if [ $? -ne 0 ]; then
+  exit 1
+fi
 
 # git stash pop
 # git submodule foreach git stash pop
-
