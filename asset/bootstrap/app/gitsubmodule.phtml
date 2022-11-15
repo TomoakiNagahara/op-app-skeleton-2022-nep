@@ -17,7 +17,7 @@ namespace OP;
 $m1 = 'Not initializing git submodule';
 $m2 = 'Execute the following command.';
 $c1 = 'cd '.dirname($_SERVER['SCRIPT_FILENAME']);
-$c2 = 'sh ./asset/git/submodule/init.sh';
+$c2 = 'sh ./asset/git/submodule/init.sh ' . _BRANCH_;
 
 //	...
 if( basename($_SERVER['SCRIPT_FILENAME']) === 'ci.php' ){
