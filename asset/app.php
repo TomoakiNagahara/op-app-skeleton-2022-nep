@@ -27,6 +27,7 @@ try {
 	 */
 	foreach([
 		'config/php',
+		'config/op',
 		'bootstrap',
 		'rootpath',
 		'config',
