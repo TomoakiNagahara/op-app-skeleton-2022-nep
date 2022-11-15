@@ -14,7 +14,7 @@
 namespace OP;
 
 //	onepiece-framework settings.
-define('_BRANCH_', '2022', true);
+define('_BRANCH_', '2022');
 
 //	...
 return [];
