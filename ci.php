@@ -80,6 +80,11 @@ try {
 	$exit = 1;
 } // catch
 
+//	If display is on.
+if( OP()->Request('display') ?? 1 ){
+	//	...
+	OP()->Sandbox('template:/app.phtml');
+} // Execute time, Usage memory
 
 //	exit
 exit($exit);
