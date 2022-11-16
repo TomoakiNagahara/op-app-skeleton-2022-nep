@@ -28,8 +28,8 @@ namespace OP;
  */
 define('_OP_APP_START_', microtime(true));
 
-//	init
-$fail = false;
+//	...
+$exit = 0;
 
 //	...
 try {
@@ -77,9 +77,9 @@ try {
 	echo "\n\n";
 	echo $message."\n\n";
 	echo $e->getTraceAsString()."\n\n";
-	$fail = true;
+	$exit = 1;
 }
 
 
-//	...
-exit($fail ? 1: 0);
+//	exit
+exit($exit);
