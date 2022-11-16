@@ -38,11 +38,11 @@ RootPath('app'      , $app_root                 );
 RootPath('asset'    , $asset_root               );
 RootPath('op'       , $asset_root.'core'        );
 RootPath('core'     , $asset_root.'core'        );
-/* Reduce memory usage.
 RootPath('unit'     , $asset_root.'unit'        );
+RootPath('layout'   , $asset_root.'layout'      );
 RootPath('template' , $asset_root.'template'    );
-*/
 
+//	...
 return;
 
 //	Check if symbolic link.
