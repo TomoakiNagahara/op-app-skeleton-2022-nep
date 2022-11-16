@@ -74,11 +74,11 @@ try {
 	$file    = OP()->MetaPath()->Encode($file);
 
 	//	...
-	echo "\n\n";
+	echo "\n";
 	echo $message."\n\n";
 	echo $e->getTraceAsString()."\n\n";
 	$exit = 1;
-}
+} // catch
 
 
 //	exit
