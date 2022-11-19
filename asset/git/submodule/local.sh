@@ -10,6 +10,7 @@ sed -i -e "s|/layout-|/layout/|g" .gitmodules
 sed -i -e "s|/op-unit-|/unit/|g" .gitmodules
 sed -i -e "s|/op-module-|/module/|g" .gitmodules
 sed -i -e "s|/op-layout-|/layout/|g" .gitmodules
+sed -i -e "s|/op-webpack-|/webpack/|g" .gitmodules
 
 # Sync
 git submodule sync
