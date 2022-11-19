@@ -52,9 +52,9 @@
 	branch = 2022
 [submodule "asset/webpack/css"]
 	path = asset/webpack/css
-	url = https://github.com/onepiece-framework/op-module-webpack-css.git
+	url = https://github.com/onepiece-framework/op-webpack-css.git
 	branch = 2022
 [submodule "asset/webpack/js"]
 	path = asset/webpack/js
-	url = https://github.com/onepiece-framework/op-module-webpack-js.git
+	url = https://github.com/onepiece-framework/op-webpack-js.git
 	branch = 2022
