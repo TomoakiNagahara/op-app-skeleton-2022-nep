@@ -77,7 +77,7 @@ try {
 	echo "\n";
 	echo $message."\n\n";
 	echo $e->getTraceAsString()."\n\n";
-	$exit = 1;
+	$exit = __LINE__;
 } // catch
 
 //	If display is on.
