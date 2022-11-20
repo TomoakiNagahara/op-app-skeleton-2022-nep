@@ -50,4 +50,9 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
       - run: php app.php
-      - run: sh ./asset/git/submodule/init.sh 2022; php ci.php
+
+      - name: Setup OP
+      - run: sh ./asset/git/submodule/init.sh 2022
+
+      - name: CI
+      - run: php ci.php
