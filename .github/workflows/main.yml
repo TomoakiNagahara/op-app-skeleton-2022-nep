@@ -49,10 +49,7 @@ jobs:
         uses: nanasess/setup-php@v3
         with:
           php-version: ${{ matrix.php }}
-      - run: php app.php
-
-      - name: Setup OP
-      - run: sh ./asset/git/submodule/init.sh 2022
-
-      - name: CI
-      - run: php ci.php
+      - run: |
+          php app.php
+          sh ./asset/git/submodule/init.sh 2022
+          php ci.php
