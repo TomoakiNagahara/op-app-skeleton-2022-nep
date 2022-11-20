@@ -1,5 +1,5 @@
 
-# sudo port install realpath
+# --> sudo port install realpath
 HOME=$(realpath ~/)
 
 # Replace
