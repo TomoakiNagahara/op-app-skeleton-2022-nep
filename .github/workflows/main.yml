@@ -51,5 +51,6 @@ jobs:
           php-version: ${{ matrix.php }}
       - run: |
           php app.php
-          sh ./asset/git/submodule/init.sh 2022
+          sh asset/git/submodule/github.sh TomoakiNagahara
+          sh asset/git/submodule/init.sh   2022
           php ci.php
