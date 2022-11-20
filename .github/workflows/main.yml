@@ -52,3 +52,4 @@ jobs:
       - run: php app.php
       - run: sh ./asset/git/submodule/init.sh 2022
       - run: php app.php
+      - run: php  ci.php
