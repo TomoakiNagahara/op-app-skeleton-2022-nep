@@ -1,54 +1,54 @@
 [submodule "asset/core"]
 	path = asset/core
-	url = https://github.com/onepiece-framework/core.git
+	url = https://github.com/onepiece-framework/op-core.git
 	branch = 2022
 [submodule "webpack"]
 	path = webpack
-	url = https://github.com/onepiece-framework/module-webpack.git
+	url = https://github.com/onepiece-framework/op-module-webpack.git
 	branch = 2022
 [submodule "asset/layout/white"]
 	path = asset/layout/white
-	url = https://github.com/onepiece-framework/layout-white.git
+	url = https://github.com/onepiece-framework/op-layout-white.git
 	branch = 2022
 [submodule "asset/unit/app"]
 	path = asset/unit/app
-	url = https://github.com/onepiece-framework/unit-app.git
+	url = https://github.com/onepiece-framework/op-unit-app.git
 	branch = 2022
 [submodule "asset/unit/layout"]
 	path = asset/unit/layout
-	url = https://github.com/onepiece-framework/unit-layout.git
+	url = https://github.com/onepiece-framework/op-unit-layout.git
 	branch = 2022
 [submodule "asset/unit/notice"]
 	path = asset/unit/notice
-	url = https://github.com/onepiece-framework/unit-notice.git
+	url = https://github.com/onepiece-framework/op-unit-notice.git
 	branch = 2022
 [submodule "asset/unit/router"]
 	path = asset/unit/router
-	url = https://github.com/onepiece-framework/unit-router.git
+	url = https://github.com/onepiece-framework/op-unit-router.git
 	branch = 2022
 [submodule "asset/unit/template"]
 	path = asset/unit/template
-	url = https://github.com/onepiece-framework/unit-template.git
+	url = https://github.com/onepiece-framework/op-unit-template.git
 	branch = 2022
 [submodule "asset/unit/webpack"]
 	path = asset/unit/webpack
-	url = https://github.com/onepiece-framework/unit-webpack.git
+	url = https://github.com/onepiece-framework/op-unit-webpack.git
 	branch = 2022
 [submodule "asset/unit/dump"]
 	path = asset/unit/dump
-	url = https://github.com/onepiece-framework/unit-dump.git
+	url = https://github.com/onepiece-framework/op-unit-dump.git
 	branch = 2022
 [submodule "asset/testcase"]
 	path = asset/testcase
-	url = https://github.com/onepiece-framework/module-testcase.git
+	url = https://github.com/onepiece-framework/op-module-testcase.git
 	branch = 2022
 [submodule "asset/reference"]
 	path = asset/reference
-	url = https://github.com/onepiece-framework/module-reference.git
+	url = https://github.com/onepiece-framework/op-module-reference.git
 	branch = 2022
 [submodule "asset/develop"]
 	path = asset/develop
-	url = https://github.com/onepiece-framework/module-develop.git
+	url = https://github.com/onepiece-framework/op-module-develop.git
 	branch = 2022
 [submodule "asset/webpack/css"]
 	path = asset/webpack/css
