@@ -49,7 +49,11 @@ jobs:
         uses: nanasess/setup-php@v3
         with:
           php-version: ${{ matrix.php }}
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+
       - run: php app.php
       - run: sh asset/git/submodule/github.sh TomoakiNagahara
       - run: sh asset/git/submodule/init.sh   2022
-          # php ci.php
+      - run: php ci.php
