@@ -50,11 +50,9 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
         with:
           key: php-${{ hashFiles('.gitignore') }}
-          restore-keys: php-
 
       - run: php app.php
       - run: sh asset/git/submodule/github.sh TomoakiNagahara
