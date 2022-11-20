@@ -1,3 +1,5 @@
+About each files
+===
 
 # init.sh
 
@@ -20,13 +22,17 @@ sh rename.sh origin upstream
  Automatically update each submodules.
 
 ```sh
-sh update.sh origin branch_name
+sh update.sh [origin] [branch_name]
 ```
 
-# origin.sh
+# ~~origin.sh~~
 
- Add new origin that private.
- This script is deprecated.
+ ~~Add new origin that private.~~
+ ~~This script is deprecated.~~
+
+ Do not use this file.
+ Use local.sh instead.
+ That is clean and correct.
 
 # github.sh
 
@@ -41,5 +47,21 @@ sh github.sh my_github_user_name
  Change to local repository from git.
 
 ```sh
-sh github.sh my_github_user_name
+sh local.sh
+```
+
+# repo.sh
+
+ Change to private server repository from git.
+
+```sh
+sh repo.sh
+```
+
+# push.sh
+
+ Push all submodule branch.
+
+```sh
+sh push.sh branch_name
 ```
