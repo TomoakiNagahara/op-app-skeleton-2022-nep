@@ -25,10 +25,10 @@ if( Env::isCI() ){
 	//	...
 	if(!file_put_contents(OP::MetaPath('asset:/config/').'_admin.php',  OP::Decode($file)) ){
 		echo 'Could not write to this file. (asset:/config/_admin.php)';
-		exit(__LINE__);
+		return false;
 	}
 	//	...
-	return;
+	return true;
 }
 ?>
 <?php include(__DIR__.'/../html_head.phtml') ?>
@@ -42,3 +42,5 @@ if( Env::isCI() ){
 			<div class="code"><pre><code><?= $file ?></code></pre></div>
 		</section>
 <?php include(__DIR__.'/../html_foot.phtml') ?>
+<?php
+return false;
