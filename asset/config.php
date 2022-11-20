@@ -35,7 +35,9 @@ $config = Config::Get('admin');
 foreach( [Env::_ADMIN_IP_, Env::_ADMIN_MAIL_] as $key ){
 	//	...
 	if( empty($config[$key]) ){
-		include(__DIR__.'/bootstrap/app/config-admin.phtml');
-		exit(1);
+		//	...
+		if(!include(__DIR__.'/bootstrap/app/config-admin.phtml') ){
+			exit(2);
+		}
 	}
 }
