@@ -33,6 +33,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      # https://tech.fusic.co.jp/posts/2021-11-17-github-actions-cache/
+      - uses: actions/cache@v2
+        with:
+          path: ~/
+          key: php-${{ hashFiles('.gitignore') }}
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -50,12 +56,7 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
 
-      - uses: actions/cache@v2
-        with:
-          path: ~/
-          key: php-${{ hashFiles('.gitignore') }}
-
       - run: php app.php
       - run: sh asset/git/submodule/github.sh TomoakiNagahara
       - run: sh asset/git/submodule/init.sh   2022
-      - run: php ci.php
+      - run: php ci.php display=1
