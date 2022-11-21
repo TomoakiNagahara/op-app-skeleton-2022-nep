@@ -25,6 +25,11 @@ if(!$_SERVER['REQUEST_TIME_FLOAT'] ?? null ){
 	$_SERVER['REQUEST_TIME_FLOAT'] = microtime(true);
 }
 
+`git stash save`;
+`git push origin master`;
+
+return;
+
 //	...
 ob_start();
 passthru('sh asset/git/submodule/update.sh');
