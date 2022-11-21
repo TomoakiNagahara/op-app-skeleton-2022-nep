@@ -25,16 +25,26 @@ if(!$_SERVER['REQUEST_TIME_FLOAT'] ?? null ){
 	$_SERVER['REQUEST_TIME_FLOAT'] = microtime(true);
 }
 
-`git stash save`;
-`git push origin master`;
-
-return;
+//	MIME
+header('Content-Type: text/plain; charset=UTF-8');
 
 //	...
-ob_start();
-passthru('sh asset/git/submodule/update.sh');
-$result = ob_get_contents();
-ob_end_clean();
+require_once('asset/core/include/json.php');
 
-echo '=============================='.PHP_EOL;
-echo $result;
+//	...
+if( $account = $_POST['repository']['owner']['login'] ?? $_GET['account'] ?? null ){
+	//	...
+	if(!apcu_store('account', $account) ){
+		echo "Store account is fail. ({$account})\n";
+		exit(__LINE__);
+	}
+}else{
+	//	...
+	if(!$account = apcu_fetch('account') ){
+		echo "Fetch account is fail.\n";
+		exit(__LINE__);
+	}
+}
+
+//	...
+echo $account;
