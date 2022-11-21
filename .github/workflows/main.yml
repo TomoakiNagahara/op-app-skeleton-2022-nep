@@ -60,3 +60,11 @@ jobs:
       - run: sh asset/git/submodule/github.sh TomoakiNagahara
       - run: sh asset/git/submodule/init.sh   2022
       - run: php ci.php display=1
+
+      - name: To onepiece-framework push!
+        run: |
+          git remote add upstream https://github.com/onepiece-framework/op-app-skeleton-2022
+          git push upstream master
+          sed -i -e "s|TomoakiNagahara|onepiece-framework|g" .gitmodules
+          git submodule sync
+          git submodule foreach git push origin 2022
