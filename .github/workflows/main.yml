@@ -57,6 +57,8 @@ jobs:
           php-version: ${{ matrix.php }}
 
       - run: php app.php
-      - run: sh asset/git/submodule/github.sh ${{ secrets.ACCOUNT }}
+      - name: Change github account name
+        if: ${{ secrets.ACCOUNT }}
+        run: sh asset/git/submodule/github.sh ${{ secrets.ACCOUNT }}
       - run: sh asset/git/submodule/init.sh   2022
       - run: php ci.php display=1
