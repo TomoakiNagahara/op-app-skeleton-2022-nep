@@ -30,10 +30,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     # Do ”Steps” run in parallel?
     steps:
-      # https://stackoverflow.com/questions/70249519/how-to-check-if-a-secret-variable-is-empty-in-if-conditional-github-actions
-      env:
-        ACCOUNT: ${{ secrets.ACCOUNT }}
-
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
@@ -62,7 +58,6 @@ jobs:
 
       - run: php app.php
       - name: Change github account name
-        if: ${{ env.ACCOUNT != '' }}
         run: sh asset/git/submodule/github.sh ${{ secrets.ACCOUNT }}
       - run: sh asset/git/submodule/init.sh   2022
       - run: php ci.php display=1
