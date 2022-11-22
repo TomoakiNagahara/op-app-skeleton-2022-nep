@@ -58,7 +58,7 @@ jobs:
 
       - run: php app.php
       - name: Change github account name
-        if: ${{ secrets.ACCOUNT }}
+        # if: ${{ secrets.ACCOUNT }}
         run: sh asset/git/submodule/github.sh ${{ secrets.ACCOUNT }}
       - run: sh asset/git/submodule/init.sh   2022
       - run: php ci.php display=1
