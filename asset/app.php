@@ -24,6 +24,7 @@ try {
 	 * @moved     2019-12-27   app-skeleton-2020-nep:/app.php --> asset/app.php
 	 * @moved     2022-10-30   bootstrap.php - Initialize onepiece-framework application.
 	 * @added     2022-10-30   rootpath.php
+	 * @renamed   2023-01-01   app.php --> init.php
 	 */
 	foreach([
 		'config/php',
