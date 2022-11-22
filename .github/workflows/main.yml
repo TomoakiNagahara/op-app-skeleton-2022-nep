@@ -25,11 +25,14 @@ jobs:
       matrix:
         operating-system: [ ubuntu-latest ]
         php: [ '7.4' ] # [ '5.4', '5.5', '5.6', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1' ]
-    name: PHP ${{ matrix.php }} sample
+    name: PHP ${{ matrix.php }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     # Do ”Steps” run in parallel?
     steps:
+      env:
+        ACCOUNT: hoge
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
